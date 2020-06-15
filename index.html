@@ -1,62 +1,293 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="zh">
+
 <head>
     <meta charset="utf-8">
-    <title>微明的博客</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <link rel="stylesheet" href="./res/layui/css/layui.css">
-    <link rel="stylesheet" href="./res/css/global.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>程序员导航 - 一个帮助开发者成长的程序员网址导航。</title>
+    <meta name="keywords" content="前端开发,程序员导航,工程师导航,程序员之家,Android导航,IOS导航,Android网址导航,IOS程序员导航,IT导航,Android程序员导航,IOS程序员导航,Html5网址导航,前端导航,前端工程师导航,码农导航,面试技巧,程序猿导航网站,工程师,网站开发,外包网站。">
+    <meta name="description" content="作为一名码农，随着平时工作的需要，慢慢收集了国内外很多优秀网站，这其中包括在线工具、在线运行、免费接口、在线资源、在线学习、技术论坛、技术博客等等，满足一般程序员日常需求。">
+    <meta name="author" content="HDyanghj" />
+    <link rel="shortcut icon" href="https://public.imaring.com/images/code-elf/favicon.png">
+    <link rel="stylesheet" href="https://public.imaring.com/css/public.css">
+    <link rel="stylesheet" href="https://public.imaring.com/css/fonts/iconfont/iconfont.css">
+
+    <link id="dark-theme-style" rel="stylesheet" type="text/css" href="https://public.imaring.com/css/dark.css">
+    <link id="light-theme-style" rel="stylesheet" type="text/css" href="https://public.imaring.com/css/light.css">
+
+    <script src="https://public.imaring.com/js/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="https://public.imaring.com/css/bootstrap-4.3.1/css/bootstrap.min.css">
+    <script src="https://public.imaring.com/js/popper.min.js"></script>
+    <script src="https://public.imaring.com/css/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
+
 <body>
+<!--
+当你的才华还撑不起你的野心的时候，你就应该静下心来学习；
+当你的能力还驾驭不了你的目标时，就应该沉下心来，历练。
+梦想，不是浮躁，而是沉淀和积累，只有拼出来的美丽，没有等出来的辉煌。
+机会永远是留给最渴望的那个人，学会与内心深处的你对话，问问自己，想要怎样的人生，静心学习，耐心沉淀。
+-->
+<!--sidebar-->
+<nav class="navbar nav-main navbar-bg">
+    <div class="menu">
+        <div class="iconfont" id="navBtn">&#xe609;</div>
+        <div>CODE ELF</div>
+    </div>
+    <div class="theme-toggler-wrapper">
+        <input type="checkbox" class="custom-control-input" id="customSwitch">
+        <label for="customSwitch" title="切换主题"></label>
+    </div>
+</nav>
+<div class="nav-bg"></div>
+<div class="main-layout" data-spy="scroll" data-target=".layout-left-nav">
 
-<h1 style="position: absolute; width:100%; text-align: center; top: 20px; left: 0; font-size: 20px; color: #333;">
-    微明的博客
-</h1>
+    <!--banner-->
+    <header class="main-layout-left" id="nav"  role="tablist" aria-multiselectable="true">
+        <div class="layout-left-nav leftnav" id="leftNav">
+            <nav class="nav-layout">
+                <!-- Title -->
+                <div class="left-nav-title">
+                    CODE ELF
+                    <div class="iconfont" id="navBtnHide">&#xe61f;</div>
+                </div>
+                <!-- Navigation -->
+                <ul id="accordion" class="scrollbar-style"></ul>
+            </nav>
 
-<div class="layui-container">
-    <table class="layui-table layui-text">
-        <colgroup>
-            <col width="150">
-            <col>
-        </colgroup>
-        <thead>
-        <tr>
-            <th>页面</th>
-            <th>文件</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>首页</td>
-            <td><a href="html/index.html" target="_blank">index.html</td>
-        </tr>
-        <tr>
-            <td>详情</td>
-            <td><a href="html/details.html" target="_blank">details.html</td>
-        </tr>
-        <tr>
-            <td>发表评论</td>
-            <td><a href="html/comment.html" target="_blank">comment.html</td>
-        </tr>
-        <tr>
-            <td>留言</td>
-            <td><a href="html/message.html" target="_blank">message.html</td>
-        </tr>
-        <tr>
-            <td>关于</td>
-            <td><a href="html/about.html" target="_blank">about.html</td>
-        </tr>
-        <tr>
-            <td>404</td>
-            <td><a href="html/404.html" target="_blank">404.html</td>
-        </tr>
-        </tbody>
-    </table>
+        </div>
+    </header>
+    <section class="main-layout-right">
+        <div class="web-list" id="webList"></div>
+    </section>
 </div>
+<script type="text/javascript">
+
+    // Theme Switcher
+    (function() {
+        // 定义样式文件
+        let DARK_STYLE = "https://public.imaring.com/css/dark.css";
+        let LIGHT_STYLE = "https://public.imaring.com/css/light.css"
+        let DARK_IMG = "https://public.imaring.com/images/code-elf/code-elf-dark.png";
+        let LIGHT_IMG = "https://public.imaring.com/images/code-elf/code-elf-light.png";
+
+        // 定义开关元素
+        let toggler = document.getElementById("customSwitch");
+        // 获取head标签元素
+        let head = document.getElementsByTagName("head")[0];
+        let link = document.createElement("link");
+        link.id = "theme-style"
+        link.rel = "stylesheet";
+        // 获取localStorage数据，判断当前状态
+        if (window.localStorage.getItem("code-elf-theme") == "light") {
+            // 白色
+            toggler.checked = true;
+            link.href = LIGHT_STYLE;
+            $("#logo-img").attr('src',LIGHT_IMG);
+        } else {
+            // 黑色
+            toggler.checked = false;
+            link.href = DARK_STYLE;
+            $("#logo-img").attr('src',DARK_IMG);
+        }
+        head.appendChild(link);
+        head.removeChild(document.getElementById("dark-theme-style"));
+        head.removeChild(document.getElementById("light-theme-style"));
+
+        toggler.addEventListener("click", function () {
+            let link = document.getElementById("theme-style");
+            let href = link.getAttribute("href");
+            if (href == DARK_STYLE) {
+                link.setAttribute("href", LIGHT_STYLE);
+                toggler.checked = true;
+                window.localStorage.setItem("code-elf-theme", "light");
+                $("#logo-img").attr('src',LIGHT_IMG);
+            } else {
+                link.setAttribute("href", DARK_STYLE);
+                toggler.checked = false;
+                window.localStorage.setItem("code-elf-theme", "dark");
+                $("#logo-img").attr('src',DARK_IMG);
+            }
+        });
+    })();
+
+    $.ajax({
+        //请求方式
+        type:'GET',
+        //发送请求的地址以及传输的数据
+        url:'https://public.imaring.com/js/data.json',
+        //服务器返回的数据类型
+        dataType:'json',
+        success:function(res){
+            //请求成功函数内容
+            //console.log(res.data)
+            //获取需要的数据
+            let tags = res.tags
+            let list = res.data
+            console.log('本站共收录：'+list.length+'个站点')
+            //拼接字符串
+            let tagstr = '';
+            let listData = '';
+            tagstr += '<li class="item-list">'+
+                '<a class="item-list-a" href="http://qinlei.xyz">' +
+                '<i class="iconfont icon-shouye"></i>' +
+                '<span class="title">首页</span>'+
+                '</a>' +
+                '</li>';
+
+            //放入页面的容器显示
+            $('#webList').html(tagstr);
+
+            $.each(tags, function (i, item) {
+                //console.log(item)
+                if(item.list != null){
+                    let str = ''
+                    $.each(item.list, function (n, term) {
+                        str +=	'<li><a class="smooth" href="#' + term.id + '">'+ term.title +'</a></li>'
+
+                        listData += '<h4 class="web-title"><i class="iconfont icon-huati1" style="margin-right: 7px;"></i>' + term.title +'</h4>';
+                        let dataList = [];
+                        $.each(list, function (d, items) {
+                            //对数据做遍历，拼接到页面显示
+                            if(term.id == items.id){
+                                dataList += '<div class="list-mian col-lg-3 .col-md-3 col-sm-6 col-xs-12">'+
+                                    '<a class="web-list-cont" href="' + items.webUrl +'" data-toggle="tooltip" data-placement="bottom" title="' + items.webTitle + '" data-original-title="' + items.webTitle + '" target="_blank">'+
+                                    '<div class="web-list-title">'+
+                                    '<p class="web-list-img"><img src="' + items.iconUrl + '" class="img-circle" width="40"></p>'+
+                                    '<p class="xe-user-name overflowClip_1">'+
+                                    '<strong>' + items.webName + '</strong>'+
+                                    '</p>'+
+                                    '</div>'+
+                                    '<div class="web-list-comment">'+
+                                    '<p class="overflowClip_2">' + items.webSummary + '</p>'+
+                                    '</div>'+
+                                    '</a>'+
+                                    '</div>';
+                            }
+                        })
+                        listData += '<div class="row" id="' + term.id + '">' + dataList + '</div>'
 
 
-<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_30088308'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "w.cnzz.com/c.php%3Fid%3D30088308' type='text/javascript'%3E%3C/script%3E"));</script>
+                    });
+                    tagstr += '<li class="item-list">'+
+                        '<a class="item-list-a collapsed smooth" data-toggle="collapse" href="#' + item.id + '">' +
+                        '<i class="iconfont ' + item.icon + '"></i>' +
+                        '<span class="title">' + item.title + '</span>'+
+                        '<span class="iconfont pull-right icon-huaban"></span>'+
+                        '</a>'+
+                        '<ul id="' + item.id + '" class="item-ul collapse" data-parent="#accordion">'+
+                        str +
+                        '</ul>';
+                    '<li>'
+                }else{
+                    let live = ''
+                    if(item.title == '常用推荐'){
+                        live = '<i class="live pull-right color-red">♥︎</i>'
+                    }else{
+                        live = ''
+                    }
+                    tagstr += '<li class="item-list">'+
+                        '<a class="item-list-a" href="#' + item.id + '">' +
+                        '<i class="iconfont ' + item.icon + '"></i>' +
+                        '<span class="title">' + item.title + '</span>'+
+                        live+
+                        '</a>' +
+                        '</li>';
+                    listData += '<h4 class="web-title"><i class="iconfont icon-huati1" style="margin-right: 7px;"></i>' + item.title +'</h4>';
+                    let dataList = [];
+                    $.each(list, function (d, items) {
+                        //对数据做遍历，拼接到页面显示
+                        if(item.title == items.section || item.id == items.id){
+                            dataList += '<div class="list-mian col-lg-3 .col-md-3 col-sm-6 col-xs-12">'+
+                                '<a class="web-list-cont" href="' + items.webUrl +'" data-toggle="tooltip" data-placement="bottom" title="' + items.webTitle + '" data-original-title="' + items.webTitle + '" target="_blank">'+
+                                '<div class="web-list-title">'+
+                                '<p class="web-list-img"><img src="' + items.iconUrl + '" class="img-circle" width="40"></p>'+
+                                '<p class="xe-user-name overflowClip_1">'+
+                                '<strong>' + items.webName + '</strong>'+
+                                '</p>'+
+                                '</div>'+
+                                '<div class="web-list-comment">'+
+                                '<p class="overflowClip_2">' + items.webSummary + '</p>'+
+                                '</div>'+
+                                '</a>'+
+                                '</div>';
+                        }
+                    })
+                    listData += '<div class="row" id="' + item.id + '">' + dataList + '</div>'
+
+                }
+            });
+            //放入页面的容器显示
+            $('#accordion').html(tagstr);
+            $('#webList').html(listData);
+            $('[data-toggle="tooltip"]').tooltip();
+
+        },
+        error:function(err){
+            //console.log(err)
+            //请求失败函数内容
+        }
+    });
+
+    $(document).ready(function () {
+        $("#navBtn").on('click',function(){
+            $("#nav").show()
+            $("#leftNav").addClass("leftnav")
+            $("#leftNav").show()
+            $(".nav-bg").show()
+        });
+        $("#navBtnHide").on('click',function(){
+            $("#nav").hide()
+            $("#leftNav").removeClass("leftnav")
+            $("#leftNav").hide()
+            $(".nav-bg").hide()
+        });
+        $(".nav-bg").on('click',function(){
+            $("#nav").hide()
+            $("#leftNav").removeClass("leftnav")
+            $(".nav-bg").hide()
+        });
+        // 创建函数
+        $.extend({
+            'time':function () {
+                fetch('https://v1.hitokoto.cn').then(function (res) {
+                    return res.json();
+                }).then(function (e) {
+                    $('#description').html(e.hitokoto + "<br/> -「<strong>" + e.from + "</strong>」")
+                }).catch(function (err) {
+                    //console.error(err);
+                })
+            }
+        });
+        // 调用
+        $.time();
+
+        setInterval(function() {
+            // 调用
+            $.time();
+        }, 5000);
+
+        $("#accordion .item-list ul li").click(function() {
+            $(this).siblings('li').removeClass('active'); // 删除其他兄弟元素的样式
+            $(this).addClass('active'); // 添加当前元素的样式
+        });
+        $("a.smooth").click(function(e) {
+            //console.log(e)
+            $("#accordion li").each(function() {
+                $(this).removeClass("active");
+            });
+            $(this).parent("li").addClass("active");
+        });
+
+    });
+</script>
 </body>
+
 </html>
