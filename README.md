@@ -1,5 +1,3 @@
-> 大道至简，悟在天成
-
 ## Java
 * [Mybatis批量插入](Java/Mybatis批量插入.md)
 
