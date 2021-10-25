@@ -1,10 +1,19 @@
-## 开发工作
-- 需求评审
-- 系统设计
-- 代码实现
-- 测试回归
-- 功能上线
-- 效果验证
-- 文档记录
-- 运维工作
-- 答疑工作
+> 大道至简，悟在天成
+
+## Java
+* [Mybatis批量插入](Java/Mybatis批量插入)
+
+## Nodejs
+
+## Nginx
+* [Docker安装Nginx](Nginx/Docker安装Nginx)
+
+## Git
+* [初始化提交](Git/初始化提交)
+
+## Linux
+* [Linux部署项目](Linux/Linux部署项目)
+* [Linux备份MySQL数据库](Linux/Linux备份MySQL数据库)
+
+## MinIO
+* [Docker安装MinIO](MinIO/Docker安装MinIO)
