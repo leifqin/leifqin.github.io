@@ -1,4 +1,4 @@
-# Ubuntu安裝Docker.md
+# Ubuntu安裝Docker
 
 這裡介紹在 Ubuntu Linux 中安裝 Docker 的步驟、基本操作教學以及 hello world 程式。
 

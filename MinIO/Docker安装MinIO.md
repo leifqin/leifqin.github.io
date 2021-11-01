@@ -1,4 +1,4 @@
-# Docker安装MinIO.md
+# Docker安装MinIO
 
 ## 拉取镜像
 ``` bash

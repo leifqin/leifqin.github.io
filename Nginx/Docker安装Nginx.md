@@ -1,4 +1,4 @@
-# Docker安装Nginx.md
+# Docker安装Nginx
 
 ## Docker 启动 Nginx
 ``` bash

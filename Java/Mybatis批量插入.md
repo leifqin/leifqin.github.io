@@ -1,4 +1,4 @@
-# Mybatis批量插入.md
+# Mybatis批量插入
 
 ## foreach 方式插入
 

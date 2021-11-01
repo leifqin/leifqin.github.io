@@ -1,4 +1,4 @@
-# Linux部署项目.md
+# Linux部署项目
 
 ## 安装 Nginx
 ```bash
