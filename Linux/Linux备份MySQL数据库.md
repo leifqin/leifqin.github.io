@@ -1,3 +1,5 @@
+# Linux备份MySQL数据库.md
+
 ## 创建 backup.sh 文件
 ```bash
 cd /home
