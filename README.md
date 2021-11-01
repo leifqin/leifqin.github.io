@@ -1,5 +1,6 @@
 ## Java
 * [Mybatis批量插入](Java/Mybatis批量插入.md)
+* [maven引入本地jar包](Java/maven引入本地jar包)
 
 ## Docker
 * [Ubuntu安裝Docker](Docker/Ubuntu安裝Docker.md)
