@@ -11,7 +11,7 @@
 * [Nginx极简教程](Nginx/Nginx极简教程.md)
 
 ## Git
-* [初始化提交](Git/初始化提交.md)
+* [Git常用命令](Git/Git常用命令.md)
 
 ## Linux
 * [Linux常用命令](Linux/Linux常用命令.md)

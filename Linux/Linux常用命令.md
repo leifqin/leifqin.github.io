@@ -1,5 +1,7 @@
 # Linux 常用命令
 
+> 参考 [Linux命令大全](https://www.linuxcool.com/)
+
 ## firewall-cmd 命令
 ``` bash
 firewall-cmd --zone=public --add-port=3306/tcp --permanent
