@@ -43,35 +43,19 @@ cd /usr/local/nginx/sbin/
 ./nginx -s stop  #停止，直接查找nginx进程id再使用kill命令强制杀掉进程
 ./nginx -s quit  #退出停止，等待nginx进程处理完任务再进行停止
 ./nginx -s reload  #重新加载配置文件，修改nginx.conf后使用该命令，新配置即可生效
+./nginx -t #检查配置时候正确
 
-#重启nginx，建议先停止，再启动
-./nginx -s stop
-./nginx
+```
 
-#查看nginx进程
-ps aux|grep nginx
-
-#在rc.local增加启动代码即可
+``` bash
+#设置开机启动
 vi /etc/rc.local
 #增加一行 /usr/local/nginx/sbin/nginx，增加后保存
 #设置执行权限
 cd /etc
 chmod 755 rc.local
-
-#进入nginx配置文件目录，找到nginx的配置文件nginx.conf
-cd /usr/local/nginx/conf/
-
-#直接修改
-vi nginx.conf
-
-#检查配置时候正确
-/usr/local/nginx/sbin/nginx -t
-
-#修改完成后，重新加载配置文件
-cd /usr/local/nginx/sbin/
-./nginx -s reload
-
 ```
+
 ``` nginx
 server {
 	listen       80;
