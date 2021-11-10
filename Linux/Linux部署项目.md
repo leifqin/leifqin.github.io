@@ -158,15 +158,13 @@ export PATH=$PATH:$JAVA_HOME/bin
 ```
 ## 启动项目
 ```bash
-1. 上传 ry.sh 和 zhst.jar 到 /home/zhst 下
+1. 上传 ry.sh 和 ruoyi-admin.jar 到 /home/ruoyi 下
 
 2. chmod u+x ry.sh
 
 3. 修改 ry.sh
 #########################################################
-AppName=zhst.jar
-
-nohup java -jar  $JVM_OPTS $AppName > /dev/null 2>&1 &
+AppName=ruoyi-admin.jar
 #########################################################
 
 #使用unix换行符
@@ -174,10 +172,9 @@ vim ry.sh
 :set ff=unix
 :wq
 
-4. ./ry.sh start
-./ry.sh stop
-./ry.sh restart
-./ry.sh status
+4. 启动
+./ry.sh start 启动 stop 停止 restart 重启 status 状态
 ```
-
+> 参考资料
+- [ry.sh](https://github.com/yangzongzhuan/RuoYi/blob/master/ry.sh)
 
