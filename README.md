@@ -24,7 +24,7 @@
 ## Mac
 * [Mac常用技巧总结](Mac/Mac常用技巧总结.md)
 * [CommandLineTools](Mac/CommandLineTools.md)
-* [重置SMC](Mac/重置SMC)
+* [重置SMC](Mac/重置SMC.md)
 
 ## JBoss
 * [JBoss漏洞](JBoss/JBoss漏洞.md)
