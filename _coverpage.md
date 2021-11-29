@@ -1,6 +1,6 @@
-# 欢迎来到我的空间
+# Welcome
 
-- 大道至简，悟在天成
+- Avenue to Jane
 
 [Tech-Words](Awesome-Tech-Words)
 [architect-awesome](https://github.com/xingshaocheng/architect-awesome)
