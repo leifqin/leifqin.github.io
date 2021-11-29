@@ -3,4 +3,5 @@
 - 大道至简，悟在天成
 
 [Tech-Words](Awesome-Tech-Words)
+[architect-awesome](https://github.com/xingshaocheng/architect-awesome)
 [Get Started](README)
