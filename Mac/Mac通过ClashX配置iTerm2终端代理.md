@@ -20,11 +20,10 @@ proxy_on
 proxy_off
 ```
 
-> 注意事项
+> 注意事项: source .zshrc 失败
 
-compinit:503: no such file or directory: /usr/local/share/zsh/site-functions/_docker<br/>
-compinit:503: no such file or directory: /usr/local/share/zsh/site-functions/_docker_compose<br/>
-compinit:shift:505: shift count must be <= $#
+compinit: no such file or directory: /usr/local/share/zsh/site-functions/_docker<br/>
+compinit: no such file or directory: /usr/local/share/zsh/site-functions/_docker_compose
 
 ``` bash
 brew cleanup
