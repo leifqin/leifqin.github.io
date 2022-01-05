@@ -1,6 +1,6 @@
-# Mybatis批量插入
+## Mybatis批量插入
 
-## foreach 方式插入
+### foreach 方式插入
 
 ``` java
 @Test
