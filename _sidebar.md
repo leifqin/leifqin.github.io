@@ -1,4 +1,4 @@
-* [GitHub]](GitHub/)
+* [GitHub](GitHub/)
 * [Java](Java/)
 * [Docker](Docker/)
 * [Nginx](Nginx/)
