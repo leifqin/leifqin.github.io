@@ -4,7 +4,6 @@
 * [Nginx](Nginx/)
 * [Git](Git/)
 * [Linux](Linux/)
-* [MinIO](MinIO/)
 * [Mac](Mac/)
 * [Awesome](Awesome/)
 * [Roadmap](Roadmap/)
