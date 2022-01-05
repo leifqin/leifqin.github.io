@@ -1,6 +1,6 @@
-# GitHub-Learning
+# WeiMing-Learning
 
-- GitHub学习记录
+- 微明学习教程
 
 [AweSome](Awesome/README)
 [Get Started](README)
