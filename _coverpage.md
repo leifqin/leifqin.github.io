@@ -1,9 +1,6 @@
-# Welcome
+# GitHub-Learning
 
-- Avenue to Jane
+- GitHub学习记录
 
-[Tech-Words](Awesome-Tech-Words)
-[GitHub-Chinese-Top-Charts](https://github.com/kon9chunkit/GitHub-Chinese-Top-Charts)
-[architect-awesome](https://github.com/xingshaocheng/architect-awesome)
-[awesome-frontend](https://github.com/JingwenTian/awesome-frontend)
+[AweSome](Awesome/README)
 [Get Started](README)
