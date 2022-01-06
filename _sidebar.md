@@ -31,6 +31,7 @@
   * [awesome-javascript](https://github.com/sorrycc/awesome-javascript)
   * [awesome-python](https://github.com/vinta/awesome-python)
   * [awesome-java](https://github.com/akullpp/awesome-java)
+  * [awesome-mac](https://wangchujiang.com/awesome-mac/index.zh.html)
   * [Awesome-GitHub-Repo](https://github.com/Wechat-ggGitHub/Awesome-GitHub-Repo)
 * **Roadmap**
   * [frontend](https://roadmap.sh/frontend)

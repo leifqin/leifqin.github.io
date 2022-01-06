@@ -2,5 +2,5 @@
 
 - 微明学习教程
 
-[AweSome](Awesome/README)
+[Wei Ming](https://blog.qinlei.xyz)
 [Get Started](README)
