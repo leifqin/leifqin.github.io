@@ -1,5 +1,3 @@
-* **GitHub**
-  * [GitHub-Chinese-Top-Charts](https://github.com/kon9chunkit/GitHub-Chinese-Top-Charts)
 * **Java**
   * [Mybatis批量插入](Java/Mybatis批量插入)
   * [maven引入本地jar包](Java/maven引入本地jar包)
@@ -23,6 +21,8 @@
   * [重置SMC](Mac/重置SMC)
   * [Mac通过ClashX配置iTerm2终端代理](Mac/Mac通过ClashX配置iTerm2终端代理)
   * [Homebrew](Mac/Homebrew)
+* **GitHub**
+  * [GitHub-Chinese-Top-Charts](https://github.com/kon9chunkit/GitHub-Chinese-Top-Charts)
 * **Awesome**
   * [Awesome-Tech-Words](https://github.com/rd2coding/Awesome-Tech-Words)
   * [architect-awesome](https://github.com/xingshaocheng/architect-awesome)
