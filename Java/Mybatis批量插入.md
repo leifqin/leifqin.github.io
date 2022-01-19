@@ -1,6 +1,6 @@
 # Mybatis批量插入
 
-## foreach 方式插入
+## foreach方式插入
 
 ``` java
 @Test
@@ -32,4 +32,25 @@ public void testInsertBatch() throws Exception {
     </foreach >
 </insert>
 
+```
+
+## batch模式插入
+``` java
+    SqlSession sqlSession = sqlSessionTemplate.getSqlSessionFactory().openSession(ExecutorType.BATCH, false);
+    UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+    for (int i = 0; i < 100000; i++) {
+        User user = new User();
+        user.setId("id" + i);
+        user.setName("name" + i);
+        user.setPassword("password" + i);
+        userMapper.insert(user);
+    }
+    sqlSession.commit();
+```
+
+``` xml
+<insert id="insert">
+    INSERT INTO t_user (id, name, password)
+        VALUES(#{id}, #{name}, #{password})
+</insert>
 ```
