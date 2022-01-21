@@ -73,7 +73,7 @@
 </profiles>
 ```
 
-``` yml
+``` yaml
 ruoyi:
   profile: @ruoyi.profile@ 
 
