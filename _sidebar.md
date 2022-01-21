@@ -10,6 +10,7 @@
   * [解决Docker安装MySQL不区分大小写问题](Docker/解决Docker安装MySQL不区分大小写问题)
 * **Nginx**
   * [Nginx极简教程](Nginx/Nginx极简教程)
+  * [Nginx常用配置](Nginx/Nginx常用配置)
 * **Git**
   * [Git常用命令](Git/Git常用命令)
 * **Linux**
