@@ -59,7 +59,7 @@
         <properties>
             <profiles.active>test</profiles.active>
             <logging.level>warn</logging.level>
-            <ruoyi.profile>~/code/upload</ruoyi.profile>
+            <ruoyi.profile>/home/app/upload</ruoyi.profile>
         </properties>
     </profile>
     <profile>
@@ -67,7 +67,7 @@
         <properties>
             <profiles.active>prod</profiles.active>
             <logging.level>warn</logging.level>
-            <ruoyi.profile>>~/code/upload</ruoyi.profile>
+            <ruoyi.profile>/home/app/upload</ruoyi.profile>
         </properties>
     </profile>
 </profiles>
