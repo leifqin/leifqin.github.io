@@ -1,13 +1,13 @@
 # Nginx常用配置
 
 ## 1. 多个config配置
-``` conf
+``` nginx
 # 在conf文件夹下新建vhosts文件夹
 include vhosts/*.conf;
 ```
 
 ## 2. 配置上传文件大小限制
-``` conf
+``` nginx
 #上传文件大小限制
 client_max_body_size 1024M; 
 #设置为on表示启动高效传输文件的模式
@@ -17,7 +17,7 @@ keepalive_timeout 1800;
 ```
 
 ## 3. SSL配置
-``` conf
+``` nginx
 server {
     listen 443 ssl;
     server_name qinlei.xyz;
@@ -47,7 +47,7 @@ server {
 ```
 
 ## 4. 强制跳转https
-``` conf
+``` nginx
 server {
     listen 80;
     server_name qinlei.xyz;
