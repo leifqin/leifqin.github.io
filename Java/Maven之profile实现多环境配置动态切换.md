@@ -14,30 +14,24 @@
             </configuration>
         </plugin>
     </plugins>
-
     <resources>
         <resource>
-            <!--打包该目录下的 application.yml -->
             <directory>src/main/resources</directory>
-            <!-- 启用过滤 即该资源中的变量将会被过滤器中的值替换 -->
-            <filtering>true</filtering>
-            <excludes>
-                <exclude>static/**/*.woff</exclude>
-                <exclude>static/**/*.woff2</exclude>
-                <exclude>static/**/*.ttf</exclude>
-            </excludes>
+            <!-- 关闭过滤 -->
+            <filtering>false</filtering>
         </resource>
         <resource>
             <directory>src/main/resources</directory>
-            <filtering>false</filtering>
+            <!-- 引入所有 匹配文件进行过滤 -->
             <includes>
-                <include>static/**/*.woff</include>
-                <include>static/**/*.woff2</include>
-                <include>static/**/*.ttf</include>
+                <include>application*</include>
+                <include>bootstrap*</include>
+                <include>banner*</include>
             </includes>
+            <!-- 启用过滤 即该资源中的变量将会被过滤器中的值替换 -->
+            <filtering>true</filtering>
         </resource>
     </resources>
-
 </build>
 
 <profiles>
@@ -47,7 +41,6 @@
             <!-- 环境标识，需要与配置文件的名称相对应 -->
             <profiles.active>dev</profiles.active>
             <logging.level>debug</logging.level>
-            <ruoyi.profile>${user.dir}/upload</ruoyi.profile>
         </properties>
         <activation>
             <!-- 默认环境 -->
@@ -59,7 +52,6 @@
         <properties>
             <profiles.active>test</profiles.active>
             <logging.level>warn</logging.level>
-            <ruoyi.profile>/home/app/upload</ruoyi.profile>
         </properties>
     </profile>
     <profile>
@@ -67,15 +59,12 @@
         <properties>
             <profiles.active>prod</profiles.active>
             <logging.level>warn</logging.level>
-            <ruoyi.profile>/home/app/upload</ruoyi.profile>
         </properties>
     </profile>
 </profiles>
 ```
 
 ``` yaml
-ruoyi:
-  profile: @ruoyi.profile@ 
 
 # 日志配置
 logging:
