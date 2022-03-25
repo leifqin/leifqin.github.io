@@ -92,9 +92,6 @@ server {
 
 ```
 
-> 注意事项：可以选择 Docker 安装 Nginx
-* [Docker安装Nginx](Nginx/Docker安装Nginx)
-
 ## 安装 Docker 
 ```bash
 curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun

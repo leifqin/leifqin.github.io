@@ -1,39 +1,26 @@
 # Docker安装Nginx
 
-## Docker 启动 Nginx
 ``` bash
-docker run -p 80:80 -p 443:443 --name nginx \
---restart=always \
---privileged=true \
--v /mydata/nginx/conf/nginx.conf:/etc/nginx/nginx.conf \
--v /mydata/nginx/html:/etc/nginx/html \
--v /mydata/nginx/log:/var/log/nginx \
--v /mydata/nginx/cert:/etc/nginx/cert \
--d nginx 
+docker pull nginx
 ```
 
-## 配置 SSL 证书
-``` nginx
-server { 
-    listen 80; 
-    listen 443 ssl; 
-    server_name  qinlei.xyz;
+``` bash
+sudo docker run --name nginx-test -p 8081:80 -d nginx
+```
 
-    ssl_certificate /etc/nginx/cert/baidu.com_chain.crt;
-    ssl_certificate_key /etc/nginx/cert/baidu.com_key.key;
-    ssl_session_timeout 5m;
-    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
-    ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:HIGH:!aNULL:!MD5:!RC4:!DHE;
-    ssl_prefer_server_ciphers on;
+``` bash
+mkdir -p /home/nginx/www /home/nginx/logs /home/nginx/conf
+```
 
-    client_max_body_size 1024m;
+``` bash
+sudo docker cp f77f78d2228d:/etc/nginx/nginx.conf /home/nginx/conf
+```
 
-    #charset koi8-r;
-    #access_log  /var/log/nginx/host.access.log  main;
+``` bash
+sudo docker run -d -p 8082:80 --name nginx-test-web -v /home/nginx/www:/usr/share/nginx/html -v /home/nginx/conf/nginx.conf:/etc/nginx/nginx.conf -v /home/nginx/logs:/var/log/nginx nginx
+```
 
-    location / {
-        root   /etc/nginx/html; #页面存放目录
-        index  index.html index.htm; #默认页面
-    }
-}
+``` bash
+cd /home/nginx/www
+touch index.html
 ```
