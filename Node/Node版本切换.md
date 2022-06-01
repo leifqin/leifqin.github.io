@@ -4,7 +4,7 @@
 ``` bash
 npm install -g nrm
 
-nrm ls   //查看镜像源, *表示正在使用的
+nrm ls
 
   npm ---------- https://registry.npmjs.org/
   yarn --------- https://registry.yarnpkg.com/
@@ -13,7 +13,7 @@ nrm ls   //查看镜像源, *表示正在使用的
   taobao ------- https://registry.npmmirror.com/
   npmMirror ---- https://skimdb.npmjs.com/registry/   
 
-nrm use cnpm //切换
+nrm use cnpm
 
 npm get registry
 
