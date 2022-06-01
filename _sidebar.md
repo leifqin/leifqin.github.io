@@ -2,6 +2,8 @@
   * [Maven之profile实现多环境配置动态切换](Java/Maven之profile实现多环境配置动态切换)
   * [Mybatis批量插入](Java/Mybatis批量插入)
   * [maven引入本地jar包](Java/maven引入本地jar包)
+* **Node**
+  * [Node版本切换](Node/Node版本切换)
 * **Docker**
   * [Ubuntu安裝Docker](Docker/Ubuntu安裝Docker)
   * [CentOS7安裝Docker](Docker/CentOS7安裝Docker)
