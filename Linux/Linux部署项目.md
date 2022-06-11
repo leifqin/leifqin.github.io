@@ -129,6 +129,8 @@ firewall-cmd --zone=public --add-port=3306/tcp --permanent
 firewall-cmd --reload
 
 docker container update --restart=always mysql
+
+注意查看操作系统时间和数据库的时间是否正确
 ```
 ## 安装 JDK
 ```bash
