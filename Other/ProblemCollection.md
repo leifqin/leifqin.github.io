@@ -30,3 +30,38 @@ FLUSH PRIVILEGES;
      </resource>
 </resources>
 ```
+
+## 3. Ubuntu 安装 MySQL 问题
+```
+------------------------------------------------------------------------------
+/etc/mysql/debian.cnf ->user   password
+
+mysql -udebian-sys-maint -pUsIgysQBZbL6X4qW
+mysql> 
+show databases;
+use mysql;
+update user set authentication_string=PASSWORD("123456") where user='root';
+update user set plugin="mysql_native_password";
+flush privileges;
+exit;
+
+set global validate_password_policy=0;
+
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '123456' WITH GRANT OPTION;
+
+FLUSH PRIVILEGES;
+----------------------------------------------------------------------------
+
+/etc/mysql/mysql.conf.d/mysqld.cnf
+
+# By default we only accept connections from localhost 
+#bind-address   = 127.0.0.1 
+bind-address   = 0.0.0.0
+
+[mysqld] 
+lower_case_table_names=1
+
+sql-mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+
+------------------------------------------------------------------------------
+```
