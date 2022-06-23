@@ -65,3 +65,13 @@ sql-mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_
 
 ------------------------------------------------------------------------------
 ```
+
+## 4. 终端访问GitHub
+```
+打开ClashX
+设置为系统代理
+出站模式选择（直连）
+节点选择 US - 美国西雅图
+curl https://github.com
+git push
+```
