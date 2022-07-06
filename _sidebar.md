@@ -41,4 +41,4 @@
   * [frontend](https://roadmap.sh/frontend)
   * [backend](https://roadmap.sh/backend)
 * **Other**
-  * [Problem collection](Other/ProblemCollection)
+  * [常见问题](Other/常见问题)
